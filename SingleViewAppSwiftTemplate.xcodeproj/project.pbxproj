@@ -14,6 +14,7 @@
 		3A8AADD31DF9B85E00A2B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */; };
 		3A8AADDE1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADDD1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift */; };
 		3A8AADE91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */; };
+		DE0B60FA2093445000A03B1B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B60F92093445000A03B1B /* ScoreViewController.swift */; };
 		DE6855F6208FDEC900FD1F9B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6855F5208FDEC900FD1F9B /* Event.swift */; };
 		DE6855F8208FE05300FD1F9B /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6855F7208FE05300FD1F9B /* GameManager.swift */; };
 		DE6855FA208FE7F800FD1F9B /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE6855F9208FE7F800FD1F9B /* Events.plist */; };
@@ -52,6 +53,7 @@
 		3A8AADE41DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewAppSwiftTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwiftTemplateUITests.swift; sourceTree = "<group>"; };
 		3A8AADEA1DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE0B60F92093445000A03B1B /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		DE6855F5208FDEC900FD1F9B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DE6855F7208FE05300FD1F9B /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		DE6855F9208FE7F800FD1F9B /* Events.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Events.plist; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				DE6855F9208FE7F800FD1F9B /* Events.plist */,
 				DE718472209062A90025D2BF /* PlistConverter.swift */,
 				DE718474209065C40025D2BF /* EventsUnarchiver.swift */,
+				DE0B60F92093445000A03B1B /* ScoreViewController.swift */,
 			);
 			path = SingleViewAppSwiftTemplate;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0B60FA2093445000A03B1B /* ScoreViewController.swift in Sources */,
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				DE6855F8208FE05300FD1F9B /* GameManager.swift in Sources */,
 				DE6855F6208FDEC900FD1F9B /* Event.swift in Sources */,

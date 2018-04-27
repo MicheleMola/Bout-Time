@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,24 +14,21 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen" translatesAutoresizingMaskIntoConstraints="NO" id="FuZ-Cl-Xuq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen" translatesAutoresizingMaskIntoConstraints="NO" id="FuZ-Cl-Xuq">
                                 <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="FuZ-Cl-Xuq" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1f1-BJ-iUf"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="FuZ-Cl-Xuq" secondAttribute="bottom" id="GxF-SY-Zgi"/>
-                            <constraint firstAttribute="trailing" secondItem="FuZ-Cl-Xuq" secondAttribute="trailing" id="HFg-62-5Nc"/>
-                            <constraint firstItem="FuZ-Cl-Xuq" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xQ4-WK-0xx"/>
+                            <constraint firstItem="APm-54-gQR" firstAttribute="bottom" secondItem="FuZ-Cl-Xuq" secondAttribute="bottom" id="GxF-SY-Zgi"/>
+                            <constraint firstItem="APm-54-gQR" firstAttribute="trailing" secondItem="FuZ-Cl-Xuq" secondAttribute="trailing" id="HFg-62-5Nc"/>
+                            <constraint firstItem="FuZ-Cl-Xuq" firstAttribute="leading" secondItem="APm-54-gQR" secondAttribute="leading" id="xQ4-WK-0xx"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="APm-54-gQR"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

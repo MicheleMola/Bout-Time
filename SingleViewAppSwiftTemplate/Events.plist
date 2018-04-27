@@ -4,11 +4,43 @@
 <array>
 	<dict>
 		<key>text</key>
-		<string>Il napoli</string>
+		<string>Il napoli 1</string>
 		<key>link</key>
 		<string>http://google.it</string>
 		<key>year</key>
 		<integer>1926</integer>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Il napoli 2</string>
+		<key>link</key>
+		<string>http://google.it</string>
+		<key>year</key>
+		<real>1927</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Il napoli 3</string>
+		<key>link</key>
+		<string>http://google.it</string>
+		<key>year</key>
+		<real>1928</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Il napoli 4</string>
+		<key>link</key>
+		<string>http://google.it</string>
+		<key>year</key>
+		<real>1929</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Il napoli 5</string>
+		<key>link</key>
+		<string>http://google.it</string>
+		<key>year</key>
+		<real>1930</real>
 	</dict>
 </array>
 </plist>
