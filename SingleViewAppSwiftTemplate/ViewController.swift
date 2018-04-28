@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 enum Direction {
   case up
@@ -25,11 +26,17 @@ class ViewController: UIViewController {
   @IBOutlet weak var thirdButton: UIButton!
   @IBOutlet weak var fourthButton: UIButton!
   
+  @IBOutlet weak var firstDownButton: UIButton!
+  @IBOutlet weak var secondUpButton: UIButton!
+  @IBOutlet weak var secondDownButton: UIButton!
+  @IBOutlet weak var thirdUpButton: UIButton!
+  @IBOutlet weak var thirdDownButton: UIButton!
+  @IBOutlet weak var fourthUpButton: UIButton!
+  
   @IBOutlet weak var nextRoundButton: UIButton!
   
   @IBOutlet weak var countdown: UILabel!
   @IBOutlet weak var infoLabel: UILabel!
-  
   
   // Set of variables for the timer
   var timerIsOn = false
@@ -39,7 +46,12 @@ class ViewController: UIViewController {
   
   let gameManager: GameManager
   var events = [Event]()
-  var buttonsCollection = [UIButton]()
+  
+  var upAndDownButtonsCollection = [UIButton]()
+  var eventTextButtonsCollection = [UIButton]()
+  var viewsCollection = [UIView]()
+  
+  var shakeIsAllowed = false
   
   required init?(coder aDecoder: NSCoder) {
     do {
@@ -56,13 +68,16 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    buttonsCollection = [firstButton, secondButton, thirdButton, fourthButton]
+    upAndDownButtonsCollection = [firstDownButton, secondUpButton, secondDownButton, thirdUpButton, thirdDownButton, fourthUpButton]
+    
+    eventTextButtonsCollection = [firstButton, secondButton, thirdButton, fourthButton]
+    
+    viewsCollection = [firstView, secondView, thirdView, fourthView]
     
     roundView()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
+    
     displayEvents()
+
   }
   
   override func becomeFirstResponder() -> Bool {
@@ -70,44 +85,73 @@ class ViewController: UIViewController {
   }
   
   override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-    if motion == .motionShake {
+    if motion == .motionShake && shakeIsAllowed {
       checkSequence()
     }
   }
   
   func displayEvents() {
-    // Start timer
     startTimer()
     
+    // Enable Up and Down buttons
+    disableAndEnableUpAndDownButtons()
+    
+    // Disable User interaction on all events
+    disableAndEnableUserInteractionOnEventTextButtons()
+    
+    // Enable motion shake
+    shakeIsAllowed = true
+    
+    // Show countdown
     countdown.isHidden = false
+    
+    // Hide Next Round button
     nextRoundButton.isHidden = true
+    
+    // Change text in info label
     infoLabel.text = "Shake to complete"
-        
+    
+    // Get Four random events
     self.events = gameManager.getRandomEvents()
     
+    // Populate text events
     updateEventsPosition()
+  }
+  
+  func disableAndEnableUpAndDownButtons() {
+    for button in upAndDownButtonsCollection {
+      button.isEnabled = !button.isEnabled
+    }
+  }
+  
+  func disableAndEnableUserInteractionOnEventTextButtons() {
+    for button in eventTextButtonsCollection {
+      button.isUserInteractionEnabled = !button.isUserInteractionEnabled
+    }
   }
   
   func updateEventsPosition() {
     
-    for (event, button) in zip(events, buttonsCollection) {
+    // Set event text for each buttons
+    for (event, button) in zip(events, eventTextButtonsCollection) {
       button.setTitle(event.text, for: .normal)
     }
   }
   
   func roundView() {
-    firstView.layer.cornerRadius = 5.0
-    secondView.layer.cornerRadius = 5.0
-    thirdView.layer.cornerRadius = 5.0
-    fourthView.layer.cornerRadius = 5.0
-    
+    // Round all views
+    for view in viewsCollection {
+      view.layer.cornerRadius = 5.0
+    }
   }
   
   @IBAction func downButtonPressed(_ sender: UIButton) {
+    // Use the tag of the down button to change the events position in the events collection
     swapEvent(withIndex: sender.tag, andDirection: .down)
   }
   
   @IBAction func upButtonPressed(_ sender: UIButton) {
+    // Use the tag of the up button to change the events position in the events collection
     swapEvent(withIndex: sender.tag, andDirection: .up)
   }
   
@@ -115,7 +159,7 @@ class ViewController: UIViewController {
     nextRound()
   }
   
-  
+  // Change position event in events collection by index
   func swapEvent(withIndex index: Int, andDirection direction: Direction) {
     switch direction {
     case .down:
@@ -124,6 +168,7 @@ class ViewController: UIViewController {
       self.events.swapAt(index - 1, index)
     }
     
+    // Re-populate text events in buttons
     updateEventsPosition()
   }
   
@@ -144,22 +189,36 @@ class ViewController: UIViewController {
   }
   
   func goToScoreView() {
+    
+    // Get score
     let score = self.gameManager.feedbackGame()
     
+    // Present ScoreViewControl to show the score
     let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
     if let vc : ScoreViewController = mainStoryboard.instantiateViewController(withIdentifier: "ScoreViewController") as? ScoreViewController {
       vc.score = score
       self.present(vc, animated: true, completion: nil)
     }
     
+    // Reset game
     self.gameManager.resetGame()
-    
   }
   
   func checkSequence() {
     
+    // Stop Timer
     stopTimer()
     
+    // Disable Up and Down buttons
+    disableAndEnableUpAndDownButtons()
+    
+    // Enable User interaction on all events
+    disableAndEnableUserInteractionOnEventTextButtons()
+    
+    // Enable motion shake
+    shakeIsAllowed = false
+    
+    // Check sequence of events
     let isCorrect = self.gameManager.isCorrectSequence(events: self.events)
     
     if isCorrect {
@@ -168,13 +227,40 @@ class ViewController: UIViewController {
       nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_fail"), for: .normal)
     }
     
+    // Change content mode to the next round button
     nextRoundButton.imageView?.contentMode = .scaleAspectFit
+    
+    // Show Next round button
     nextRoundButton.isHidden = false
     
+    // Hide Countdown label
     countdown.isHidden = true
-    infoLabel.text = "Tap events to learn more"
     
+    // Change text in info label
+    infoLabel.text = "Tap events to learn more"
   }
+  
+  @IBAction func eventTextPressed(_ sender: UIButton) {
+    // Get link from event clicked using the tag button
+    let url = self.events[sender.tag].link
+    
+    // Open link
+    open(url: url)
+  }
+  
+  func open(url: String) {
+    
+    // Present SFSafariViewController to show a web page with related information
+    if let url = URL(string: url) {
+      let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+      // Change colors
+      vc.preferredBarTintColor = UIColor(red: 242/255, green: 153/255, blue: 55/255, alpha: 1.0)
+      vc.preferredControlTintColor = UIColor.white
+      
+      present(vc, animated: true)
+    }
+  }
+  
   
   // MARK: Helper Methods
   
@@ -233,8 +319,9 @@ class ViewController: UIViewController {
     // Set timerIsOn to false
     timerIsOn = false
     
+    // Check sequence of events
     checkSequence()
   }
-  
 }
+
 

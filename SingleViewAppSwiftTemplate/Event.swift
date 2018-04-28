@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Event: Codable {
+// Use decodable protocol to parse Events.plist content
+struct Event: Decodable {
   var link: String
   var text: String
   var year: Int

@@ -12,6 +12,7 @@ class ScoreViewController: UIViewController {
   
   @IBOutlet weak var scoreLabel: UILabel!
   
+  // Score string passed by View Controller
   var score: String?
   
   override func viewDidLoad() {
@@ -20,10 +21,6 @@ class ScoreViewController: UIViewController {
     if let score = score {
       scoreLabel.text = score
     }
-  }
-  
-  @IBAction func playAgainPressed(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
   }
 
 }

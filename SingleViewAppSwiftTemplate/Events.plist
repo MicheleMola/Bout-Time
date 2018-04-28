@@ -4,43 +4,203 @@
 <array>
 	<dict>
 		<key>text</key>
-		<string>Il napoli 1</string>
+		<string>King Edward VIII Abdicates</string>
 		<key>link</key>
-		<string>http://google.it</string>
+		<string>https://en.wikipedia.org/wiki/Edward_VIII_abdication_crisis</string>
 		<key>year</key>
-		<integer>1926</integer>
+		<real>1936</real>
 	</dict>
 	<dict>
 		<key>text</key>
-		<string>Il napoli 2</string>
+		<string>Hitler Annexes Austria</string>
 		<key>link</key>
-		<string>http://google.it</string>
+		<string>https://it.wikipedia.org/wiki/Anschluss</string>
 		<key>year</key>
-		<real>1927</real>
+		<real>1938</real>
 	</dict>
 	<dict>
 		<key>text</key>
-		<string>Il napoli 3</string>
+		<string>Germany Invades Poland</string>
 		<key>link</key>
-		<string>http://google.it</string>
+		<string>https://en.wikipedia.org/wiki/Invasion_of_Poland</string>
 		<key>year</key>
-		<real>1928</real>
+		<real>1939</real>
 	</dict>
 	<dict>
 		<key>text</key>
-		<string>Il napoli 4</string>
+		<string>Pearl Harbour Attacked</string>
 		<key>link</key>
-		<string>http://google.it</string>
+		<string>https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor</string>
 		<key>year</key>
-		<real>1929</real>
+		<real>1941</real>
 	</dict>
 	<dict>
 		<key>text</key>
-		<string>Il napoli 5</string>
+		<string>Nelson Mandela Released from Prison</string>
 		<key>link</key>
-		<string>http://google.it</string>
+		<string>https://www.history.com/this-day-in-history/nelson-mandela-released-from-prison</string>
+		<key>year</key>
+		<real>1990</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Liberation of Paris</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Liberation_of_Paris</string>
+		<key>year</key>
+		<real>1944</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Churchill, Stalin and Roosevelt Meet at Yalta</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Yalta_Conference</string>
+		<key>year</key>
+		<real>1945</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Hiroshima Atomic Bomb</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki</string>
+		<key>year</key>
+		<real>1945</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>India and Pakistan Gain Independence</string>
+		<key>link</key>
+		<string>https://www.history.com/this-day-in-history/india-and-pakistan-win-independence</string>
+		<key>year</key>
+		<real>1947</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Manchester United Players Die in Munich Air Crash</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Munich_air_disaster</string>
+		<key>year</key>
+		<real>1958</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Launch of First Nuclear Submarine</string>
+		<key>link</key>
+		<string>https://www.independent.co.uk/life-style/history/a-day-that-shook-the-world-first-nuclear-submarine-launched-2189571.html</string>
+		<key>year</key>
+		<real>1954</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Pele&apos;s World Cup Final Performance</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/1958_FIFA_World_Cup_Final</string>
+		<key>year</key>
+		<real>1958</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>First Man in Space</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Yuri_Gagarin</string>
+		<key>year</key>
+		<real>1961</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Martin Luther King Delivers His &quot;I have a dream&quot; speech</string>
+		<key>link</key>
+		<string>https://it.wikipedia.org/wiki/I_have_a_dream</string>
+		<key>year</key>
+		<real>1963</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Beatlemania Arrives</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Beatlemania</string>
+		<key>year</key>
+		<real>1964</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>The Six-Day War Begins</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Six-Day_War</string>
+		<key>year</key>
+		<real>1967</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Armstrong Sets Foot on the Moon</string>
+		<key>link</key>
+		<string>https://www.nasa.gov/mission_pages/apollo/apollo11.html</string>
+		<key>year</key>
+		<real>1969</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Heysel Stadium Disaster</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Heysel_Stadium_disaster</string>
+		<key>year</key>
+		<real>1985</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Chernoybl Nuclear Disaster</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Chernobyl_disaster</string>
+		<key>year</key>
+		<real>1986</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Fall of Berlin Wall</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Berlin_Wall</string>
+		<key>year</key>
+		<real>1989</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Queen Victoria&apos;s Funeral</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Funeral_of_Queen_Victoria</string>
+		<key>year</key>
+		<real>1901</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Wright Brother&apos;s First Flight</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/Wright_brothers</string>
+		<key>year</key>
+		<real>1903</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string> Start Of UK General Strike</string>
+		<key>link</key>
+		<string>https://en.wikipedia.org/wiki/1926_United_Kingdom_general_strike</string>
+		<key>year</key>
+		<real>1926</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>American Golfer Bobby Jones Wins Grand Slam</string>
+		<key>link</key>
+		<string>http://www.golf.com/special-features/setting-new-standard-bobby-jones-wins-grand-slam-1930</string>
 		<key>year</key>
 		<real>1930</real>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>Hitler Becomes German Chancellor</string>
+		<key>link</key>
+		<string>https://www.history.com/this-day-in-history/adolf-hitler-is-named-chancellor-of-germany</string>
+		<key>year</key>
+		<real>1933</real>
 	</dict>
 </array>
 </plist>

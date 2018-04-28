@@ -13,6 +13,7 @@ enum EventsUnarchiverError: Error {
 }
 
 class EventsUnarchiver {
+  // Use Decodable Protocol to parse Data buffer to Events collection; return a events collection
   static func parseEvents(fromData data: Data) throws -> [Event] {
     
     let decoder = PropertyListDecoder()

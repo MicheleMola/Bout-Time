@@ -28,7 +28,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-Vy-e7C">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="130"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laV-MT-SAm">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laV-MT-SAm">
                                                 <rect key="frame" x="258" y="0.0" width="45" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="07m-7T-RJ6"/>
@@ -46,6 +46,9 @@
                                                 <state key="normal" title="Il Napoli vince 4-2 contro l'Udinese con gol di Albiol e Tonelli">
                                                     <color key="titleColor" red="0.031372549020000001" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="eventTextPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HKn-BQ-bbw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,7 +66,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aR1-I5-HBo">
                                         <rect key="frame" x="0.0" y="136.5" width="303" height="130"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxM-CL-RFa">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxM-CL-RFa">
                                                 <rect key="frame" x="258" y="0.0" width="45" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="YuS-jz-pfr"/>
@@ -75,7 +78,7 @@
                                                     <action selector="upButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2HV-nQ-SvG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5I-Nq-sQf">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5I-Nq-sQf">
                                                 <rect key="frame" x="258" y="65" width="45" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="sFp-Kp-4BN"/>
@@ -87,12 +90,15 @@
                                                     <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZ9-6f-St3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0NC-Kv-48T">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0NC-Kv-48T">
                                                 <rect key="frame" x="8" y="8" width="242" height="114"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <state key="normal" title="Il Napoli vince 4-2 contro l'Udinese con gol di Albiol e Tonelli">
                                                     <color key="titleColor" red="0.031372549020000001" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="eventTextPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fq2-W6-yEo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,7 +118,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMn-Jq-x00">
                                         <rect key="frame" x="0.0" y="272.5" width="303" height="130"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7M-Bo-mCV">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7M-Bo-mCV">
                                                 <rect key="frame" x="258" y="0.0" width="45" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="mXd-0N-WjG"/>
@@ -124,7 +130,7 @@
                                                     <action selector="upButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uzo-kr-qnj"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8p-r8-8Vj">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8p-r8-8Vj">
                                                 <rect key="frame" x="258" y="65" width="45" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="AgK-VL-zg7"/>
@@ -136,12 +142,15 @@
                                                     <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KA-tB-gNi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="URn-ok-3pM">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="URn-ok-3pM">
                                                 <rect key="frame" x="8" y="8" width="242" height="114"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <state key="normal" title="Il Napoli vince 4-2 contro l'Udinese con gol di Albiol e Tonelli">
                                                     <color key="titleColor" red="0.031372549020000001" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="eventTextPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSS-ZG-TFv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,7 +170,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iez-EQ-N8V">
                                         <rect key="frame" x="0.0" y="409" width="303" height="130"/>
                                         <subviews>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyX-sz-oXH">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyX-sz-oXH">
                                                 <rect key="frame" x="258" y="0.0" width="45" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="1DS-6X-v9N"/>
@@ -173,12 +182,15 @@
                                                     <action selector="upButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4dK-zm-vj8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-DD-Ivx">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-DD-Ivx">
                                                 <rect key="frame" x="8" y="8" width="242" height="114"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <state key="normal" title="Il Napoli vince 4-2 contro l'Udinese con gol di Albiol e Tonelli">
                                                     <color key="titleColor" red="0.031372549020000001" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="eventTextPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhO-5K-l03"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,14 +248,20 @@
                     <connections>
                         <outlet property="countdown" destination="OsB-nh-85P" id="VEq-Tk-zoT"/>
                         <outlet property="firstButton" destination="sup-3R-T4j" id="bzJ-Sr-pAS"/>
+                        <outlet property="firstDownButton" destination="laV-MT-SAm" id="vwI-gg-hXq"/>
                         <outlet property="firstView" destination="sqY-Vy-e7C" id="Ug9-O9-F8q"/>
                         <outlet property="fourthButton" destination="PjO-DD-Ivx" id="eac-xh-B71"/>
+                        <outlet property="fourthUpButton" destination="IyX-sz-oXH" id="ufa-xa-PSh"/>
                         <outlet property="fourthView" destination="iez-EQ-N8V" id="4Bs-rH-9Os"/>
                         <outlet property="infoLabel" destination="owk-pr-B2A" id="ziN-Ki-q9y"/>
                         <outlet property="nextRoundButton" destination="4L6-iK-3mO" id="cOv-e9-mQe"/>
                         <outlet property="secondButton" destination="0NC-Kv-48T" id="Waq-iN-q3m"/>
+                        <outlet property="secondDownButton" destination="X5I-Nq-sQf" id="Ghg-hs-IdV"/>
+                        <outlet property="secondUpButton" destination="OxM-CL-RFa" id="zUz-hZ-Tjm"/>
                         <outlet property="secondView" destination="aR1-I5-HBo" id="2wa-lX-UGw"/>
                         <outlet property="thirdButton" destination="URn-ok-3pM" id="gmH-M9-yX4"/>
+                        <outlet property="thirdDownButton" destination="K8p-r8-8Vj" id="nzx-yD-Z94"/>
+                        <outlet property="thirdUpButton" destination="Y7M-Bo-mCV" id="pHz-EH-NMm"/>
                         <outlet property="thirdView" destination="FMn-Jq-x00" id="0Ly-7Z-WFz"/>
                     </connections>
                 </viewController>
@@ -291,7 +309,7 @@
                                         </constraints>
                                         <state key="normal" image="play_again"/>
                                         <connections>
-                                            <action selector="playAgainPressed:" destination="man-Im-fq5" eventType="touchUpInside" id="XJy-XX-Gig"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="P1c-td-2CZ"/>
                                         </connections>
                                     </button>
                                 </subviews>

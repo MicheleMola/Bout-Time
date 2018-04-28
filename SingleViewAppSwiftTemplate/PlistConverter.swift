@@ -14,6 +14,7 @@ enum PlistConverterError: Error {
 }
 
 class PlistConverter {
+  // Return Data buffer from plist file
   static func data(fromFile name: String, ofType type: String) throws -> Data {
     guard let url = Bundle.main.url(forResource: name, withExtension: type) else { throw PlistConverterError.invalidResource }
     
