@@ -26,11 +26,18 @@ class ViewController: UIViewController {
   @IBOutlet weak var thirdButton: UIButton!
   @IBOutlet weak var fourthButton: UIButton!
   
+  // Button Tag = 0
   @IBOutlet weak var firstDownButton: UIButton!
+  
+  // Button Tag = 1
   @IBOutlet weak var secondUpButton: UIButton!
   @IBOutlet weak var secondDownButton: UIButton!
+  
+  // Button Tag = 2
   @IBOutlet weak var thirdUpButton: UIButton!
   @IBOutlet weak var thirdDownButton: UIButton!
+  
+  // Button Tag = 3
   @IBOutlet weak var fourthUpButton: UIButton!
   
   @IBOutlet weak var nextRoundButton: UIButton!
@@ -163,8 +170,10 @@ class ViewController: UIViewController {
   func swapEvent(withIndex index: Int, andDirection direction: Direction) {
     switch direction {
     case .down:
+      // Swap event with index + 1 and index in the events collection
       self.events.swapAt(index + 1, index)
     case .up:
+      // Swap event with index - 1 and index in the events collection
       self.events.swapAt(index - 1, index)
     }
     
@@ -253,7 +262,7 @@ class ViewController: UIViewController {
     // Present SFSafariViewController to show a web page with related information
     if let url = URL(string: url) {
       let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
-      // Change colors
+      // Change the colors of bar
       vc.preferredBarTintColor = UIColor(red: 242/255, green: 153/255, blue: 55/255, alpha: 1.0)
       vc.preferredControlTintColor = UIColor.white
       
